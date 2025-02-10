@@ -1,0 +1,15 @@
+{
+  "name": "neetcode-150",
+  "version": "1.0.0",
+  "description": "A project focused on solving problems from the NeetCode 150.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
