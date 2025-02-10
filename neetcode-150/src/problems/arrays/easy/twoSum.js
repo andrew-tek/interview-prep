@@ -5,13 +5,13 @@ class Solution {
      * @return {number[]}
      */
     twoSum(nums, target) {
-        const hashTable = {};
+        const hashTable = new Map();
         for(let i = 0; i < nums.length; i++){
             let numberNeeded = target - nums[i];
-            if(numberNeeded in hashTable){
-                return [i, hashTable[numberNeeded]]
+            if(hashTable.has(numberNeeded)){
+                return [i, hashTable.get(numberNeeded)]
             } else {
-                hashTable[nums[i]] = i;
+                hashTable.set(nums[i], i);
             }
         }
     }
