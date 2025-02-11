@@ -1,5 +1,4 @@
 const Solution = require('../../../src/problems/TwoPointers/easy/isPalindrome');
-
 describe('isPalindrome', () => {
     let solution;
 
