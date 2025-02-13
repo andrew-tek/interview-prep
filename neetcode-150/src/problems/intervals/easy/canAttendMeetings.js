@@ -1,0 +1,19 @@
+const Interval = require('../Interval');
+
+class Solution {
+    /**
+     * @param {Interval[]} intervals
+     * @returns {boolean}
+     */
+    canAttendMeetings(intervals) {
+        intervals.sort((a, b) => a.start - b.start);
+        for(let i = 1; i < intervals.length; i++){
+            if(intervals[i].start < intervals[i - 1].end){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+module.exports = Solution;
