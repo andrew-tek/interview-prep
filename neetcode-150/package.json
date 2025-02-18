@@ -4,7 +4,7 @@
   "description": "A project focused on solving problems from the NeetCode 150.",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest"
   },
   "dependencies": {
     "datastructures-js": "^13.0.0"
