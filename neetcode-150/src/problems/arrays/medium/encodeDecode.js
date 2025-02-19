@@ -28,6 +28,7 @@ class Solution {
             while (str[j] !== "#"){
                 j++;
             }
+            // get the number before the '#' and convert it to an integer
             let length = parseInt(str.substring(i, j));
             i = j + 1;
             j = i + length;
@@ -38,7 +39,7 @@ class Solution {
     }
 
     /*
-    decode("5#hello5#world") => ["hello", "world"]
+    decode("5#hello5#world") => ["hello", "world"]\
     */
 }
 
