@@ -1,4 +1,4 @@
-const Solution = require('../../../src/problems/arrays/medium/twoSum2');
+const Solution = require('../../../src/problems/TwoPointers/medium/twoSum2');
 
 describe('twoSum', () => {
     let solution;
