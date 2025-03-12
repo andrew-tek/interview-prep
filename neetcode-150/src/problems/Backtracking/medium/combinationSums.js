@@ -5,24 +5,24 @@ class Solution {
      * @returns {number[][]}
      */
     combinationSum(nums, target) {
-        const res = [];
-
-        const dfs = (i, cur, total) =>{
-            if(total == target){
-                res.push([...cur]);
-                return
-            }
-            if(i >= nums.length || total > target){
+        nums.sort((a, b) => a - b);
+        let result = [];
+        
+        const dfs = (i, cur, sum) => {
+            if(sum === target){
+                result.push([...cur]);
                 return;
             }
+            if(i >= nums.length || sum > target) return;
+
             cur.push(nums[i]);
-            dfs(i, cur, total + nums[i]);
+            dfs(i, cur, sum + nums[i]);
             cur.pop();
-            dfs(i + 1, cur, total);
+            dfs(i + 1, cur, sum);
         }
 
         dfs(0, [], 0);
-        return res;
+        return result;
     }
 }
 
