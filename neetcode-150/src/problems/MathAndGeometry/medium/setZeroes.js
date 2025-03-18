@@ -4,8 +4,8 @@ class Solution {
      * @return {void}
      */
     setZeroes(matrix) {
-        const ROWS = matrix.length;
-        const COLS = matrix[0].length;
+        let ROWS = matrix.length;
+        let COLS = matrix[0].length;
         let rowZero = false;
 
         for(let r = 0; r < ROWS; r++){
@@ -14,12 +14,13 @@ class Solution {
                     matrix[0][c] = 0;
                     if(r > 0){
                         matrix[r][0] = 0;
-                    } else {
+                    } else{
                         rowZero = true;
                     }
                 }
             }
         }
+
         for(let r = 1; r < ROWS; r++){
             for(let c = 1; c < COLS; c++){
                 if(matrix[0][c] == 0 || matrix[r][0] == 0){
@@ -27,17 +28,17 @@ class Solution {
                 }
             }
         }
-
         if(matrix[0][0] == 0){
             for(let r = 0; r < ROWS; r++){
                 matrix[r][0] = 0;
             }
         }
         if(rowZero){
-            for(let c = 0; c < ROWS; c++){
+            for(let c = 0; c < COLS; c++){
                 matrix[0][c] = 0;
             }
         }
+
     }
 }
 
